@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.4)
+project(paint C CXX RC)
+add_definitions(-DUNICODE -D_UNICODE)
+add_executable(paint WIN32 paint.cpp canvas.cpp bitmap.cpp paint_res.rc)
+target_link_libraries(paint PRIVATE comctl32 comdlg32)
